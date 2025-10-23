@@ -1,0 +1,27 @@
+# Core
+torch
+torchaudio
+torchvision
+numpy
+pandas
+scikit-learn
+tqdm
+
+# Audio Processing
+librosa
+soundfile
+
+# NLP / Transformer Models
+transformers
+accelerate
+
+# Visualization (from preprocessing.py)
+matplotlib
+koreanize-matplotlib
+
+# Utility
+protobuf
+sentencepiece
+
+# Optional (recommended)
+ipykernel
