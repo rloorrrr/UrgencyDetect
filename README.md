@@ -1,4 +1,4 @@
-# UrgencySense - 은우
+# UrgencySense 
 
 - 본 프로젝트는 멋쟁이사자처럼 AI 자연어처리(NLP)단기 심화 교육에서 진행한 긴급도 판단 모델 구축 프로젝트입니다.
 
@@ -51,10 +51,11 @@ flowchart TD
 
 
 ## inference
-```
-1. googleDrive (https://drive.google.com/drive/folders/11xbdv4FtbQaRsEnJWC1eDQBCFI6krnYy?usp=drive_link) 에서 해당하는 체크포인트 파일을 불러와 ./checkpoint/file로 불러온다.
-2. inference.py 실행
-```
+
+1. [googleDrive](https://drive.google.com/drive/folders/11xbdv4FtbQaRsEnJWC1eDQBCFI6krnYy?usp=drive_link) 에서 해당하는 체크포인트 파일을 불러온다
+2. SAVE_PATH = "./checkpoints/YOUR_PT" 를 해당 체크포인트 이름으로 바꿔준다 
+3. inference.py 실행
+
 
 ## 결과
 
