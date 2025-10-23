@@ -19,11 +19,11 @@ from transformers import Wav2Vec2Processor, Wav2Vec2Model
 # =========================================================
 # 설정
 # =========================================================
-WAV_ZIP = "/content/drive/MyDrive/urgency_data/Validation/1.원천데이터/VS_광주_구급.zip"
-JSON_ZIP = "/content/drive/MyDrive/urgency_data/Validation/2.라벨링데이터/VL_광주_구급.zip"
-EXTRACT_DIR = "/content/audio_dataset/Validation"
-OUTPUT_CSV = "/content/drive/MyDrive/train_embedding_split_utter/valid_광주_구급_split.csv"
-OUTPUT_NPY = "/content/drive/MyDrive/train_embedding_split_utter/valid_wav2vec2_embeddings_split.npy"
+WAV_ZIP = "YOUR_WAVE_FILE_PATH"
+JSON_ZIP = "YOUR_JSON_FILE_PATH"
+EXTRACT_DIR = "EXTRACT_DIR"
+OUTPUT_CSV = "OUTPUT_CSV_PATH"
+OUTPUT_NPY = "OUTPUT_NPY_PATH"
 MODEL_NAME = "kresnik/wav2vec2-large-xlsr-korean"
 TARGET_SR = 16000
 
