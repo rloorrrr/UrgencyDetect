@@ -31,23 +31,26 @@
 
 ## 🧠 학습 방식
 
-```mermaid
-flowchart TD
-    A[AI-Hub 음성 + JSON 데이터] --> B[전처리]
-    B --> C[Dataset 구성]
-    C --> D[멀티모달 모델: Whisper + KoELECTRA]
-    D --> E[Cross-Attention 기반 임베딩 융합]
-    E --> F[Classifier: 긴급도(하·중·상) 예측]
-    F --> G[성능 평가 및 추론 시스템 구축]
-```
+프로세스 단계
+1. AI-Hub 음성 + JSON 데이터 수집  
+2. 전처리 (오디오–라벨 매칭, 텍스트 정제)  
+3. Dataset 구성 및 DataLoader 생성  
+4. Whisper + KoELECTRA 멀티모달 모델 설계  
+5. Cross-Attention 기반 임베딩 융합  
+6. 긴급도(하·중·상) 분류 모델 학습  
+7. Validation F1 Score 기준 EarlyStopping  
+8. 최종 추론(Inference) 및 성능 평가
+
+---
 
 - 오디오 인코더: Whisper Encoder (`openai/whisper-small`)  
 - 텍스트 인코더: KoELECTRA (`monologg/koelectra-base-v3-discriminator`)  
-- 결합 구조: Cross-Attention(2층, head=8) + Hybrid Pooling(CLS+Mean)  
-- 정규화: GroupNorm + LayerNorm 융합  
-- 손실함수: FocalLoss(γ=1.8) + Weighted Sampler  
+- 결합 구조: Cross-Attention Layer ×2 (head=8) + Hybrid Pooling (CLS·Mean Concatenation)  
+- 정규화: Dual Normalization (GroupNorm + LayerNorm)  
+- 손실 함수: FocalLoss(γ=1.8) + Weighted Sampler  
 - 스케줄러: CosineAnnealingWarmRestarts  
 - EarlyStopping: Validation F1 Score 기준
+
 
 ## ⚙️ 모델 구조 요약
 
