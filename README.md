@@ -64,11 +64,11 @@
 
 ```mermaid
 flowchart TD
-    A[입력 텍스트 full_text] --> B[KoELECTRA 인코더]
-    B --> C1[CLS 임베딩 추출]
-    C1 --> D1[Dropout(0.3)]
-    D1 --> E1[Head_U - Urgency 3-way Linear]
-    D1 --> E2[Head_S - Sentiment 4-way Linear]
+    A["입력 텍스트 full_text"] --> B["KoELECTRA 인코더"];
+    B --> C1["CLS 임베딩 추출"];
+    C1 --> D1["Dropout(0.3)"];
+    D1 --> E1["Head_U: Urgency (3)"];
+    D1 --> E2["Head_S: Sentiment (4)"];
 ```
 
 - **모델:** `beomi/KcELECTRA-base-v2022`  
