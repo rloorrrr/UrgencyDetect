@@ -95,8 +95,8 @@ flowchart TD
 | 단계 | Google Colab / Drive 링크 |
 |------|----------------------------|
 | 📘 EDA | [Colab Link](https://colab.research.google.com/drive/1YKSupCTp0c6rzeMOqQxhX2DyhmmfPysA?usp=sharing) |
-| 🧹 데이터 전처리 | [Drive Link](https://drive.google.com/file/d/19vZ8cUREOpNvoCK_GnGDUbpgB9H0NvZQ/view?usp=sharing) |
+| 🧹 데이터 전처리 | [Colab Link](https://colab.research.google.com/drive/19vZ8cUREOpNvoCK_GnGDUbpgB9H0NvZQ) |
 | 🧠 모델 학습 | [Colab Link](https://colab.research.google.com/drive/1XZRGRb7w8_OaWlzltY8NaJEnnXmXwK_f?usp=sharing) |
-| 🧩 인퍼런스 | [Drive Link](https://drive.google.com/file/d/1b4PzgilX-f_u2Dj9zLJ2lqvbg_Yr5kFM/view?usp=sharing) |
+| 🧩 인퍼런스 | [Colab Link](https://colab.research.google.com/drive/1b4PzgilX-f_u2Dj9zLJ2lqvbg_Yr5kFM) |
 
 ---
