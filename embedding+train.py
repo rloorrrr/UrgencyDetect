@@ -36,7 +36,7 @@ print("✅ Device:", device)
 # ---------------------------------------------------------
 # 파일 경로 및 파라미터
 # ---------------------------------------------------------
-DF_PATH = "/content/drive/MyDrive/test_data/df_final_file_level_구급_clean.csv"
+DF_PATH = "./preprocess_data/preprocess.csv"
 assert os.path.exists(DF_PATH), f"❌ 파일 없음: {DF_PATH}"
 
 AUDIO_SR = 16000
