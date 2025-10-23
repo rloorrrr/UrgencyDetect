@@ -16,7 +16,7 @@
 
 ## 프로젝트 설명 
 - 음성 파일(.wav)과 발화된 음성을 변환한 텍스트를 사용해 긴급도(urgencyLevel)를 판별하는 멀티 모달리티, 멀티 태스크 모델을 구현하고자 하였습니다. 
-- AI허브의 위급상황 음성/음향 (고도화) - 119 지능형 신고접수 음성 인식 데이터를 사용했습니다.
+- AI허브의 [위급상황 음성/음향 (고도화) - 119 지능형 신고접수 음성 인식 데이터](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71768)를 사용했습니다.
 
 ## 데이터 구조 
 ```
