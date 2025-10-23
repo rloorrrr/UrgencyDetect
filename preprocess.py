@@ -198,7 +198,6 @@ for text in tqdm(df_all["text"], desc="Text Embedding"):
 # df_all에 업데이트
 df_all["text_emb"] = text_embs
 
-
 # 오디오 임베딩 및 피처 결합
 audio_embs = np.vstack(df_all["audio_emb"].to_numpy())
 audio_feat_cols = ["duration_sec", "speech_ratio", "energy_mean", "peak_amp", "peak_to_rms"]

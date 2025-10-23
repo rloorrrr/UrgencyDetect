@@ -129,7 +129,7 @@ MODEL_AUDIO_DIM = audio_dim
 # 5. 텍스트 및 오디오 임베딩 함수
 # =========================================================
 def extract_text_from_json(json_path):
-    """JSON 파일에서 텍스트 추출"""
+
     try:
         with open(json_path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -142,16 +142,7 @@ def extract_text_from_json(json_path):
         return ""
 
 def get_audio_emb(path, include_features=True):
-    """
-    오디오 임베딩 추출
 
-    Args:
-        path: 오디오 파일 경로
-        include_features: 추가 피처 포함 여부 (768차원 vs 773차원)
-
-    Returns:
-        numpy array: 정규화된 오디오 임베딩
-    """
     try:
         # 1. Data2Vec 임베딩 (768차원)
         y, sr = librosa.load(path, sr=16000)
@@ -232,17 +223,7 @@ def get_text_emb(text):
 label_map = {0: "하", 1: "중", 2: "상"}
 
 def predict_urgency_from_pair(json_path, wav_path, verbose=True):
-    """
-    JSON과 WAV 파일로부터 긴급도 예측
 
-    Args:
-        json_path: JSON 파일 경로
-        wav_path: WAV 파일 경로
-        verbose: 디버그 정보 출력 여부
-
-    Returns:
-        (예측 라벨, 확률 배열, 텍스트)
-    """
     # 파일 존재 확인
     if not os.path.exists(json_path):
         raise FileNotFoundError(f"JSON 파일을 찾을 수 없습니다: {json_path}")
