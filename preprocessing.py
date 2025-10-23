@@ -116,6 +116,6 @@ print(f"파일 수: {len(df_final)}")
 print(f"레이블 분포:\n{df_final['label'].value_counts().sort_index()}")
 
 # CSV 저장
-save_path = "/content/drive/MyDrive/test_data/df_final_file_level_구급_clean.csv"
+save_path = "./preprocess_data/preprocess.csv"
 df_final.to_csv(save_path, index=False, encoding="utf-8-sig")
 print("💾 파일 단위 CSV 저장 완료:", save_path)
