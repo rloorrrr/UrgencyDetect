@@ -31,6 +31,7 @@ UrgencyDetect/
 ```
 
 ## 학습 방식 
+- 학습을 원하면 ./data/1.원천데이터, ./data/2.라벨링데이터 를 ai허브에서 다운받아 넣어주세요 
 ```
 flowchart TD
     A[원천 데이터: WAV + JSON] --> B[전처리]
