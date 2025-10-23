@@ -4,34 +4,21 @@
 
 <br>
 
-## 전처리 
-1️⃣ WAV 파일과 JSON 파일 매칭
-RAW_AUDIO_DIR 폴더 내 WAV 파일과 LABEL_JSON_DIR 폴더 내 JSON 파일을 파일명 기준으로 매칭합니다.
-JSON 파일 내 utterances 항목에서 텍스트를 추출하며, 개인정보(***[개인정보])가 포함된 텍스트는 제거합니다.
+## 프로젝트 설명 
+- 음성 파일(.wav)과 발화된 음성을 변환한 텍스트를 사용해 긴급도(urgencyLevel)를 판별하는 멀티 모달리티, 멀티 태스크 모델을 구현하고자 하였습니다. 
+- AI허브의 위급상황 음성/음향 (고도화) - 119 지능형 신고접수 음성 인식 데이터를 사용했습니다.
 
-2️⃣ 텍스트 전처리
-JSON 내 여러 발화(utterances) 텍스트를 공백 기준으로 연결하여 하나의 combined_text 생성
-공백 제거 및 불필요한 문자열 제거
-긴급도(urgencyLevel) 값은 학습용 정수 레이블로 매핑: {'상': 2, '중': 1, '하': 0}
-
-3️⃣ 데이터 불균형 완화
-긴급도 클래스(urgencyLevel)별 데이터 수 불균형을 완화하기 위해 샘플링 기법 적용
-오버샘플링: 데이터가 적은 클래스 샘플 수를 가장 많은 클래스 수에 맞춰 복제
-샘플링 후 데이터는 랜덤 셔플링하여 학습 데이터셋 구성
-
-4️⃣ 최종 데이터셋
-전처리 완료 후 CSV 파일(processed_data_balanced.csv)로 저장
-
-CSV 파일 컬럼:
-audio_path: WAV 파일 경로
-text: 결합된 텍스트
-disasterMedium: 재난 매체 정보
-urgencyLevel: 원본 긴급도 라벨
-urgency_label: 정수형 긴급도 라벨
-sentiment: 감정 라벨
-균형 조정 완료 후 클래스별 샘플 수 확인 가능
-
-<br>
+## 데이터 구조 
+```
+UrgencyDetect/
+├─ preprocess_data/
+│ └─ preprocess_data.csv
+├─ README.md
+├─ inference.py
+├─ preprocess.py
+├─ requirement.txt
+└─ train.py
+```
 
 ## 학습 방식 
 ```
@@ -62,7 +49,15 @@ flowchart TD
 ```
 <br>
 
+
+## inference
+```
+1. googleDrive (https://drive.google.com/drive/folders/11xbdv4FtbQaRsEnJWC1eDQBCFI6krnYy?usp=drive_link) 에서 해당하는 체크포인트 파일을 불러와 ./checkpoint/file로 불러온다.
+2. inference.py 실행
+```
+
 ## 결과
 
 Test Accuracy: 0.6982
+
 Test F1 Score: 0.6995

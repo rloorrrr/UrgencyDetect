@@ -13,7 +13,7 @@ from transformers import AutoTokenizer, AutoModel, Wav2Vec2Processor, Wav2Vec2Mo
 # ==============================
 # 1️⃣ 설정
 # ==============================
-SAVE_PATH = "./checkpoints/wav2vec2_koelect_ew_model.pth"
+SAVE_PATH = "./checkpoints/YOUR_PT"
 TARGET_SAMPLE_RATE = 16000
 MAX_TEXT_LENGTH = 256
 MAX_AUDIO_LENGTH = TARGET_SAMPLE_RATE * 25  # 25초 제한
