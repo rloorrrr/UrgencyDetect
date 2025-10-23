@@ -82,5 +82,6 @@ python inference.py
 모델 가중치(`.pt`) 파일은 `/content/drive/MyDrive/test_data/model/1500_model.pt` 위치에 저장됩니다.
 
 ## 📊 모델 성과
+
 Test Accuracy     : 0.2767
 Weighted F1 Score : 0.2776 
